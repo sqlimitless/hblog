@@ -1,0 +1,5 @@
+rootProject.name = 'hblog'
+include 'apigateway'
+include 'discovery'
+include 'member-service'
+

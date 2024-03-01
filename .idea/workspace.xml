@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e92fa329-d7dd-401a-9b7c-c8dc3f9f7ee9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apigateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apigateway/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apigateway/src/main/java/com/hblog/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apigateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/src/main/java/com/hblog/discovery/DiscoveryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/MemberServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/adapter/in/web/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="e92fa329-d7dd-401a-9b7c-c8dc3f9f7ee9" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,8 +114,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709256031181</updated>
-      <workItem from="1709256033230" duration="828000" />
+      <workItem from="1709256033230" duration="1536000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1709258250992</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709258250992</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,5 +143,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>

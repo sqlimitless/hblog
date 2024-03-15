@@ -4,50 +4,85 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e92fa329-d7dd-401a-9b7c-c8dc3f9f7ee9" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo10" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo41_tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_1.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_10.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_2.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_3.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_4.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_5.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_6.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_7.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_8.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_9.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/binlog.000001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/binlog.000002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/binlog.000003" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/binlog.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/ib_buffer_pool" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/ibtmp1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/mysql.sock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/sys/sys_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="e92fa329-d7dd-401a-9b7c-c8dc3f9f7ee9" name="Changes" comment="jwt add">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigateway/src/main/java/com/hblog/apigateway/filter/RefreshTokenHeaderFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigateway/src/main/java/com/hblog/apigateway/jwt/JwtTokenValid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/application/RefreshTokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/domain/RefreshToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/infra/RefreshTokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/util/AESUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/discovery/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/java/com/hblog/apigateway/filter/AuthorizationHeaderFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/src/main/java/com/hblog/apigateway/filter/AuthorizationHeaderFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/member-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/application/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/infra/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/infra/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/jwt/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/jwt/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/presantation/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/presantation/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="hblog" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="hblog" type="f1a62948:ProjectNode" />
+                <item name="member-service" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="hblog" type="f1a62948:ProjectNode" />
+                <item name="member-service" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="hblog" type="f1a62948:ProjectNode" />
+                <item name="member-service" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -80,7 +115,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/leehoonjae/IdeaProjects/hblog&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/leehoonjae/IdeaProjects/hblog/db/conf.d&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -89,28 +124,45 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;8f8fd776d8500058ae3ea15e4163a926&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;redis&quot;
+    ]
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db/conf.d" />
+      <recent name="$PROJECT_DIR$/db/initdb.d" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/member-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/discovery/src/main/java/com/hblog/discovery" />
-      <recent name="$PROJECT_DIR$/discovery/src/main/resources" />
-      <recent name="$PROJECT_DIR$/apigateway/src/main/resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.hblog.discovery" />
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hblog.apigateway.filter" />
       <recent name="com.hblog.member" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MemberServiceApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="hblog.apigateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hblog.apigateway.ApiGatewayApplication" />
@@ -154,8 +206,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Spring Boot.MemberServiceApplication" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +222,20 @@
       <workItem from="1709256033230" duration="5410000" />
       <workItem from="1709269461462" duration="1591000" />
       <workItem from="1709277047514" duration="5149000" />
-      <workItem from="1709396451041" duration="2759000" />
+      <workItem from="1709396451041" duration="2930000" />
+      <workItem from="1709455724990" duration="568000" />
+      <workItem from="1709606249264" duration="106000" />
+      <workItem from="1709626731665" duration="9591000" />
+      <workItem from="1709693982501" duration="4466000" />
+      <workItem from="1710001385205" duration="296000" />
+      <workItem from="1710069462496" duration="483000" />
+      <workItem from="1710083763385" duration="1591000" />
+      <workItem from="1710428095559" duration="6344000" />
+      <workItem from="1710441615738" duration="32000" />
+      <workItem from="1710441653871" duration="23000" />
+      <workItem from="1710478058320" duration="15741000" />
+      <workItem from="1710559364983" duration="4535000" />
+      <workItem from="1710645505922" duration="5612000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -196,7 +261,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709258611801</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="docker add">
+      <option name="closed" value="true" />
+      <created>1709400332581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709400332581</updated>
+    </task>
+    <task id="LOCAL-00005" summary="jwt add">
+      <option name="closed" value="true" />
+      <created>1710509470201</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710509470201</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +297,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="docker add" />
+    <MESSAGE value="jwt add" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt add" />
   </component>
 </project>

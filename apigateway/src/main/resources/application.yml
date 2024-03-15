@@ -7,14 +7,34 @@ spring:
     gateway:
       httpclient:
         connect-timeout: 2000
-        response-timeout: 2s
+        response-timeout: 10s
       routes:
+        - id: member-service
+          uri: lb://member-service
+          predicates:
+            - Path=/member-service/users
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/member-service/(?<segment>.*), /$\{segment}
+        - id: member-service
+          uri: lb://member-service
+          predicates:
+            - Path=/member-service/login
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/member-service/(?<segment>.*), /$\{segment}
         - id: member-service
           uri: lb://member-service
           predicates:
             - Path=/member-service/**
           filters:
+            - RemoveRequestHeader=Cookie
             - RewritePath=/member-service/(?<segment>.*), /$\{segment}
+            - AuthorizationHeaderFilter
+token:
+  secretKey: 0df90d1f6a77dcec3212dda88560fe1a692396490e9945b55b386fe5639840bc
 
 eureka:
   client:

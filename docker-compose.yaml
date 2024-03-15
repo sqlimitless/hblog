@@ -58,6 +58,13 @@ services:
       - KAFKA_CLUSTERS_0_NAME=local
       - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:29092
       - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper:2181
+  redis:
+    hostname: redis
+    container_name: redis
+    image: redis:6.2.6
+    command: redis-server --requirepass mypassword --port 6379
+    ports:
+      - "6379:6379"
   discovery:
     image: hblog-discovery:0.0.1-SNAPSHOT
     networks:
@@ -70,7 +77,7 @@ services:
       - AXON_SERIALIZER_MESSAGES=jackson
       - AXON_SERIALIZER_GENERAL=xstream
   apigateway:
-    image: hblog-apigateway:1.0-SNAPSHOT
+    image: hblog-apigateway:0.0.1-SNAPSHOT
     networks:
       - hblog_network
     ports:
@@ -98,12 +105,12 @@ services:
       - AXON_SERIALIZER_MESSAGES=jackson
       - AXON_SERIALIZER_GENERAL=xstream
       - EUREKA_CLIENT_SERVICE-URL_DEFAULTZONE=http://discovery:8761/eureka
-#      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/hblog?useSSL=false&allowPublicKeyRetrieval=true
-#      - SPRING_DATASOURCE_USERNAME=mysqluser
-#      - SPRING_DATASOURCE_PASSWORD=mysqlpw
-#      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL5InnoDBDialect
-#      - SPRING_JPA_HIBERNATE_DDL_AUTO=create-drop
-#      - KAFKA_CLUSTERS_BOOTSTRAPSERVERS=kafka:29092
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/hblog?useSSL=false&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=mysqluser
+      - SPRING_DATASOURCE_PASSWORD=mysqlpw
+#      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL8InnoDBDialect
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create-drop
+      - KAFKA_CLUSTERS_BOOTSTRAPSERVERS=kafka:29092
 networks:
   hblog_network:
     driver: bridge

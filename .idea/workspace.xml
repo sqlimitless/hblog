@@ -4,46 +4,211 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e92fa329-d7dd-401a-9b7c-c8dc3f9f7ee9" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="e92fa329-d7dd-401a-9b7c-c8dc3f9f7ee9" name="Changes" comment="docker add">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigateway/src/main/java/com/hblog/apigateway/filter/AuthorizationHeaderFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/conf.d/my.conf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo10" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo32_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo33_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo34_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo35_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo36_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo37_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo38_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo39_tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo40_tmp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db/data/#innodb_redo/#ib_redo41_tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_1.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_10.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_2.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_3.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_4.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_5.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_6.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_7.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_8.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/#innodb_temp/temp_9.ibt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db/data/binlog.000001" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db/data/binlog.000002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/binlog.000003" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db/data/binlog.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/ca-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/ca.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/client-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/client-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/hblog/dead_letter_entry.ibd" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db/data/ib_buffer_pool" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/data/ibtmp1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/mysql.ibd" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db/data/mysql.sock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/mysql/general_log.CSM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/mysql/general_log.CSV" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/mysql/general_log_213.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/mysql/slow_log.CSM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/mysql/slow_log.CSV" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/mysql/slow_log_214.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/accounts_145.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/binary_log_trans_189.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/cond_instances_82.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/data_lock_waits_161.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/data_locks_160.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/error_log_83.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_errors_su_139.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_errors_su_140.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_errors_su_141.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_errors_su_142.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_errors_su_143.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_stages_cu_111.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_stages_hi_112.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_stages_hi_113.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_stages_su_114.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_stages_su_115.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_stages_su_116.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_stages_su_117.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_stages_su_118.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_119.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_120.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_121.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_122.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_123.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_124.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_125.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_126.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_127.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_128.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_129.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_statement_130.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_transacti_131.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_transacti_132.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_transacti_133.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_transacti_134.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_transacti_135.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_transacti_136.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_transacti_137.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_transacti_138.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_cur_84.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_his_85.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_his_86.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_sum_87.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_sum_88.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_sum_89.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_sum_90.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_sum_91.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/events_waits_sum_92.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/file_instances_93.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/file_summary_by__94.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/file_summary_by__95.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/global_status_181.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/global_variables_184.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/host_cache_96.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/hosts_146.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/keyring_componen_191.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/keyring_keys_152.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/log_status_174.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/memory_summary_b_154.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/memory_summary_b_155.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/memory_summary_b_156.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/memory_summary_b_157.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/memory_summary_g_153.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/metadata_locks_159.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/mutex_instances_97.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/objects_summary__98.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/performance_time_99.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/persisted_variab_187.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/prepared_stateme_175.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/processlist_100.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_appl_165.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_appl_166.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_appl_167.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_appl_168.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_appl_170.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_appl_171.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_asyn_172.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_asyn_173.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_conn_162.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_conn_164.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_grou_163.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/replication_grou_169.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/rwlock_instances_101.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/session_account__151.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/session_connect__150.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/session_status_182.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/session_variable_185.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/setup_actors_102.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/setup_consumers_103.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/setup_instrument_104.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/setup_objects_105.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/setup_threads_106.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/socket_instances_147.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/socket_summary_b_148.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/socket_summary_b_149.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/status_by_accoun_177.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/status_by_host_178.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/status_by_thread_179.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/status_by_user_180.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/table_handles_158.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/table_io_waits_s_107.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/table_io_waits_s_108.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/table_lock_waits_109.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/threads_110.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/tls_channel_stat_190.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/user_defined_fun_188.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/user_variables_b_176.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/users_144.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/variables_by_thr_183.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/performance_schema/variables_info_186.sdi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/private_key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/public_key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/server-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/data/server-key.pem" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db/data/sys/sys_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/initdb.d/create_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/initdb.d/load_data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/application/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/application/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/config/CustomModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/domain/Authority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/domain/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/infra/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/jwt/JwtTokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/jwt/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/presantation/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/presantation/request/UserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/presantation/response/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/util/SHA256.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apigateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/discovery/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/member-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/hblog/member/adapter/in/web/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="hblog" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,41 +231,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/leehoonjae/IdeaProjects/hblog&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;8f8fd776d8500058ae3ea15e4163a926&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "/Users/leehoonjae/IdeaProjects/hblog/db/conf.d",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "spring.configuration.checksum": "8f8fd776d8500058ae3ea15e4163a926",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db/conf.d" />
+      <recent name="$PROJECT_DIR$/db/initdb.d" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/member-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/discovery/src/main/java/com/hblog/discovery" />
-      <recent name="$PROJECT_DIR$/discovery/src/main/resources" />
-      <recent name="$PROJECT_DIR$/apigateway/src/main/resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.hblog.discovery" />
@@ -110,7 +283,14 @@
       <recent name="com.hblog.member" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MemberServiceApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="hblog.apigateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hblog.apigateway.ApiGatewayApplication" />
@@ -154,8 +334,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Spring Boot.MemberServiceApplication" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +350,18 @@
       <workItem from="1709256033230" duration="5410000" />
       <workItem from="1709269461462" duration="1591000" />
       <workItem from="1709277047514" duration="5149000" />
-      <workItem from="1709396451041" duration="2759000" />
+      <workItem from="1709396451041" duration="2930000" />
+      <workItem from="1709455724990" duration="568000" />
+      <workItem from="1709606249264" duration="106000" />
+      <workItem from="1709626731665" duration="9591000" />
+      <workItem from="1709693982501" duration="4466000" />
+      <workItem from="1710001385205" duration="296000" />
+      <workItem from="1710069462496" duration="483000" />
+      <workItem from="1710083763385" duration="1591000" />
+      <workItem from="1710428095559" duration="6344000" />
+      <workItem from="1710441615738" duration="32000" />
+      <workItem from="1710441653871" duration="23000" />
+      <workItem from="1710478058320" duration="15579000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -196,7 +387,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709258611801</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="docker add">
+      <option name="closed" value="true" />
+      <created>1709400332581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709400332581</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +415,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="docker add" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker add" />
   </component>
 </project>

@@ -32,8 +32,8 @@ public class UserController {
         UserDTO userDto = modelMapper.map(userRequest, UserDTO.class);
         UserDTO user = userService.loginUser(userDto);
         UserResponse userResponse = modelMapper.map(user, UserResponse.class);
-        Token token = jwtTokenProvider.createAccessToken(user.getUserId(), user.getRole());
-        refreshTokenService.saveRefreshToken(user.getUserId(), token.getRefreshToken());
+        Token token = jwtTokenProvider.createAccessToken(user.getIdx(), user.getUserId(), user.getRole());
+        refreshTokenService.saveRefreshToken(user.getIdx(), token.getRefreshToken());
         userResponse.setToken(token);
         return ResponseEntity.status(HttpStatus.OK).body(userResponse);
     }

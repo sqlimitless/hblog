@@ -29,6 +29,7 @@ spring:
           uri: lb://member-service
           predicates:
             - Path=/member-service/refresh-token
+            - Method=POST
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/member-service/(?<segment>.*), /$\{segment}
@@ -40,6 +41,14 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/member-service/(?<segment>.*), /$\{segment}
+            - AuthorizationHeaderFilter
+        - id: post-service
+          uri: lb://post-service
+          predicates:
+            - Path=/post-service/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/post-service/(?<segment>.*), /$\{segment}
             - AuthorizationHeaderFilter
 token:
   secretKey: 0df90d1f6a77dcec3212dda88560fe1a692396490e9945b55b386fe5639840bc

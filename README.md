@@ -1,0 +1,4 @@
+- APIGateway 에서 AccessToken,RefreshToken 검증후 전달.
+- Member-Service 에서 JWT 생성
+- 로그인, 회원가입 -> 토큰 검증 안함.
+- RefreshToken으로 AccessToken 요청 -> RefreshToken만 검증함. 

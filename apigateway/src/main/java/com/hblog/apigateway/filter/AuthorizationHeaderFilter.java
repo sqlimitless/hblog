@@ -40,7 +40,8 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
             }
             Claims claims = jwtTokenValid.parseJwt(jwt);
             ServerHttpRequest modifiedRequest = exchange.getRequest().mutate()
-                    .header("sub", (String) claims.get("userId"))
+                    .header("userIdx", (String) claims.get("sub"))
+                    .header("userId", (String) claims.get("userId"))
                     .header("role", (String) claims.get("role"))
                     .build();
 

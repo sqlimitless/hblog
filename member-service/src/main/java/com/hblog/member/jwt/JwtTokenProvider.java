@@ -25,14 +25,14 @@ public class JwtTokenProvider {
     @Value("${token.secretKey}")
     private String secretKey;
 
-    public Token createAccessToken(String userId, String role) {
+    public Token createAccessToken(Long userIdx, String userId, String role) {
         long nowMillis = System.currentTimeMillis();
         Date now = new Date();
         Key key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
         Map<String, Object> headerMap = new HashMap<>();
         headerMap.put("alg", "HS256");
         headerMap.put("typ", "JWT");
-        Claims claims = Jwts.claims().setSubject(userId);
+        Claims claims = Jwts.claims().setSubject(userIdx.toString());
 
         String refreshToken = Jwts.builder()
                 .setHeaderParam("typ","JWT")
@@ -43,6 +43,7 @@ public class JwtTokenProvider {
                 .compact();
 
         claims.put("role", role);
+        claims.put("userId", userId);
         String accessToken = Jwts.builder()
                 .setHeader(headerMap)
                 .setClaims(claims)

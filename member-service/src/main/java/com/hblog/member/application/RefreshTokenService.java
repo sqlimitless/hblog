@@ -1,6 +1,8 @@
 package com.hblog.member.application;
 
+import com.hblog.member.domain.Authority;
 import com.hblog.member.domain.RefreshToken;
+import com.hblog.member.domain.Role;
 import com.hblog.member.domain.UserEntity;
 import com.hblog.member.infra.RefreshTokenRepository;
 import com.hblog.member.infra.UserRepository;
@@ -10,6 +12,9 @@ import com.hblog.member.util.AESUtil;
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -39,7 +44,7 @@ public class RefreshTokenService {
         String jwt = refreshToken.replace("Bearer ", "");
         Claims claims = jwtTokenProvider.parseJwt(jwt);
         String userIdx = (String) claims.get("sub");
-        RefreshToken token = refreshTokenRepository.findByIdx(userIdx).orElseThrow();
+        RefreshToken token = refreshTokenRepository.findById(userIdx).orElseThrow();
         String decrypted;
         try {
             decrypted = aesUtil.decrypt(token.getToken());
@@ -50,9 +55,9 @@ public class RefreshTokenService {
             throw new IllegalArgumentException();
         }
         // 같으면 엑세스토큰 발급
-        UserEntity userEntity = userRepository.findByUserIdx(userIdx).orElseThrow();
-        // 아직 role 계획은 없음
-        Token accessToken = jwtTokenProvider.createAccessToken(userEntity.getIdx(), userEntity.getUserId(), "");
+        UserEntity userEntity = userRepository.findById(Long.valueOf(userIdx)).orElseThrow();
+        Set<Role> roles = userEntity.getAuthority().stream().map(Authority::getRole).collect(Collectors.toSet());
+        Token accessToken = jwtTokenProvider.createAccessToken(userEntity.getIdx(), userEntity.getUserId(), roles);
         return accessToken.getAccessToken();
     }
 }

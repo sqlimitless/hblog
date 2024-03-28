@@ -41,7 +41,7 @@ public class RefreshTokenHeaderFilter extends AbstractGatewayFilterFactory<Refre
             }
             Claims claims = jwtTokenValid.parseJwt(jwt);
             ServerHttpRequest modifiedRequest = exchange.getRequest().mutate()
-                    .header("sub", (String) claims.get("userId"))
+                    .header("userIdx", (String) claims.get("sub"))
                     .build();
 
             return chain.filter(exchange.mutate().request(modifiedRequest).build());

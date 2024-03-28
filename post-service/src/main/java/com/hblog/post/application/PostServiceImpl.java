@@ -8,6 +8,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Set;
+
 @Service
 @RequiredArgsConstructor
 public class PostServiceImpl implements PostService{
@@ -24,10 +26,11 @@ public class PostServiceImpl implements PostService{
     }
 
     @Override
-    public PostDto getPost(long postIdx, String role) {
-        // 권한 확인
+    public PostDto getPost(long postIdx, Set<String> role) {
         // 조회
+        Post post = postRepository.findById(postIdx).orElseThrow();
+        // TODO 권한 확인
         // 리턴
-        return null;
+        return modelMapper.map(post, PostDto.class);
     }
 }

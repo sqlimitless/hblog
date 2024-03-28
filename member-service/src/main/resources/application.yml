@@ -21,7 +21,7 @@ spring:
       host: localhost
       port: 6379
       password: mypassword
-      timeout: 5
+      timeout: 5000
 logging:
   level:
     org.hibernate.type: trace

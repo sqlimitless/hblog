@@ -1,6 +1,8 @@
 package com.hblog.member.application;
 
 import com.hblog.member.application.dto.UserDTO;
+import com.hblog.member.domain.Authority;
+import com.hblog.member.domain.Role;
 import com.hblog.member.domain.UserEntity;
 import com.hblog.member.infra.UserRepository;
 import com.hblog.member.util.SHA256;
@@ -10,7 +12,10 @@ import org.springframework.stereotype.Service;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -25,10 +30,12 @@ public class UserService {
             userEntity = UserEntity.builder()
                     .userId(userdto.getUserId())
                     .password(SHA256.encrypt(userdto.getPassword()))
+                    .authority(new HashSet<>())
                     .build();
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
+        userEntity.addRole(userdto.getRoles());
         userRepository.save(userEntity);
         return modelMapper.map(userEntity, UserDTO.class);
     }
@@ -56,6 +63,9 @@ public class UserService {
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
-        return modelMapper.map(userEntity, UserDTO.class);
+        Set<Role> roles = userEntity.getAuthority().stream().map(Authority::getRole).collect(Collectors.toSet());
+        UserDTO userDTO = modelMapper.map(userEntity, UserDTO.class);
+        userDTO.setRoles(roles);
+        return userDTO;
     }
 }

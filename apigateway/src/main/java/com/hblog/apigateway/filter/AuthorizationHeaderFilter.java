@@ -13,6 +13,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 @Component
 @Slf4j
 public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<AuthorizationHeaderFilter.Config> {
@@ -42,7 +45,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
             ServerHttpRequest modifiedRequest = exchange.getRequest().mutate()
                     .header("userIdx", (String) claims.get("sub"))
                     .header("userId", (String) claims.get("userId"))
-                    .header("role", (String) claims.get("role"))
+                    .header("roles", String.valueOf(Collections.singletonList(claims.get("roles"))))
                     .build();
 
             return chain.filter(exchange.mutate().request(modifiedRequest).build());
